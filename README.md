@@ -23,15 +23,30 @@ To analyze customer reviews of the Moniepoint Business app to understand sentime
 - Data saved and reloaded from a CSV for easier handling.
 
 ### 3. Sentiment Analysis
-- **Model:** `nlptown/bert-base-multilingual-uncased-sentiment`
-- **Sentiment Score Range:** 1 (Very Negative) to 5 (Very Positive)
-- **Label Mapping:**
-  - 1–2 → Negative
-  - 3 → Neutral
-  - 4–5 → Positive
+**Model Used**
+I utilize the pre-trained transformer model nlptown/bert-base-multilingual-uncased-sentiment, a robust multilingual BERT model fine-tuned for sentiment classification. This model supports multiple languages and is well-suited for short-form text, such as captions or comments.
 
-### 4. Labeling
-- Added `sentiment score` and `sentiment` (category) columns to the dataset.
+**📊 Sentiment Score Range**
+The model outputs sentiment predictions on a discrete scale from 1 to 5, where:
+
+- 1 = Very Negative
+
+- 2 = Negative
+
+- 3 = Neutral
+
+- 4 = Positive
+
+- 5 = Very Positive
+
+### 4. 🏷️ Label Mapping (Simplified)**
+For clearer interpretation and grouping, I mapped the scores into three broader sentiment categories:
+
+Negative: Scores 1–2
+
+Neutral: Score 3
+
+Positive: Scores 4–5
 
 ![Screenshot 2025-06-11 150434](https://github.com/user-attachments/assets/bb1ccc66-f57b-4a4a-8d0a-524a52edeab1)
 
